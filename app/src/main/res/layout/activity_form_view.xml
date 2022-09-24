@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/screen_margin"
+        tools:context=".ui.FormViewActivity">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nameView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/field_padding"
+            android:textSize="@dimen/field_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/numberView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/field_padding"
+            android:textSize="@dimen/field_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/bookView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/field_padding"
+            android:textSize="@dimen/field_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/numberView" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/updateFieldButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/field_margin"
+            android:text="@string/update_field"
+            app:layout_constraintEnd_toStartOf="@+id/deleteFieldButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bookView" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/deleteFieldButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/updateFieldButton"
+            app:layout_constraintTop_toTopOf="@+id/updateFieldButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
